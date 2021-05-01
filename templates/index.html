@@ -1,0 +1,104 @@
+
+
+<h1 style="color:red, font-weight:bold">Hospital management system (CRUD APP)</h1>
+
+
+
+
+<form action="actionperformed">
+
+
+<label>Patient image</label>
+<input type="file" name="img" value="{{x.img}}">
+<br>
+<br>
+
+<label>Patient id</label>
+<input type="text" name="pid" value="{{x.pid}}">
+<br>
+<br>
+
+<label>First name</label>
+<input type="text" name="first_name" value="{{x.first_name}}">
+<br>
+<br>
+
+<label>Last name</label>
+<input type="text" name="last_name" value="{{x.last_name}}">
+<br>
+<br>
+
+<label>Assigned building</label>
+<select name="building" value="{{x.building}}">
+  <option value="AC1">AC1</option>
+  <option value="AC2">AC2</option>
+  <option value="AC3">AC3</option>
+  <option value="AC4">AC4</option>
+</select>
+<br>
+<br>
+
+<label>Weight</label>
+<input type="text" name="weight" value="{{x.weight}}">
+<br>
+<br>
+
+<label>Gender</label>
+<br>
+
+  <input type="radio" name="gender" value="male"> Male<br>
+  <input type="radio" name="gender" value="female"> Female<br>
+  <input type="radio" name="gender" value="other"> Other
+
+<br>
+<b>{{x.gender}}</b><br>
+<br>
+
+
+<label>RTPCR test done</label>
+<input type="checkbox" name="rtpcr" value="{{x.rtpcr}}"><br>
+<b>{{x.rtpcr}}<b><br>
+<br>
+<br>
+
+<label for="start">Date of admission</label>
+<input type="date" name="date" min="2018-01-01" max="2018-12-31" placeholder="{{x.admission}}"><br>
+<b>{{x.admission}}</b><br>
+<br>
+<br>
+
+<label>Health remarks</label>
+<textarea name="healthremarks" placeholder="{{x.remarks}}"></textarea>
+
+<br>
+<br>
+
+
+<input type="submit" value="Add" name="add">
+<br>
+<br>
+
+<input type="submit" value="Delete" name="delete">
+<br>
+<br>
+
+<input type="submit" value="Update" name="update">
+<br>
+<br>
+
+<input type="submit" value="Show" name="show">
+
+
+</form>
+
+
+
+<br>
+<br>
+<h2> Profile pic: </h2> <br>
+
+<img style="height: 200px; width: 150px"src="{{x.img.url}}">
+<br>
+<br>
+
+<h3 style="color:red">  {{msg}} </h3>
